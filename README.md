@@ -1,1 +1,3 @@
-# quectel_bg96_gnss_plotter
+# Quectel BG96 GNSS plotter
+
+Pair of scripts for plotting the GNSS results of the BG96
