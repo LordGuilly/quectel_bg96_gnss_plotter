@@ -9,7 +9,14 @@ sleep_period = 2
 #################################
 
 ser = serial.Serial(comm_port, baudrate, timeout=1)  # open serial port
-print(ser.name)         # check which port was really used
+
+
+ser.write("AT+QGPS=1\r")     # write a string
+for response in ser.readlines():
+	if response.startswith("ERROR"):
+		print response.rstrip()
+		exit()
+
 
 
 try:
